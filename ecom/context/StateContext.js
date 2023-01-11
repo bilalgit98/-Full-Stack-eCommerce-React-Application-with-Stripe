@@ -8,7 +8,7 @@ export const StateContext = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
   const [totalPrice, setTotalPrice] = useState();
   const [quantity, setQuantity] = useState(1);
-  const [Totalquantity, setTotalQuantity] = useState();
+  const [Totalquantity, setTotalQuantity] = useState(0);
 
   const onAdd = (product, quantity) => {
     //check if product is in cart
@@ -55,6 +55,7 @@ export const StateContext = ({ children }) => {
     <Context.Provider
       value={{
         showCart,
+        setShowCart,
         cartItems,
         totalPrice,
         Totalquantity,
